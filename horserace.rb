@@ -35,13 +35,16 @@ class Track
 
 	attr_accessor :game_on
 	attr_accessor :cheats
+	attr_accessor :victor
 
 	def initialize
 		self.game_on == true
 		self.cheats == false
+		self.victor == false
 	end
 
 	def race_intro horse1, horse2, horse3, horse4
+		system("clear")
 		puts "=" * 80
 		puts "HORSE RACE TURBO".center(80)
 		puts "=" * 80
@@ -54,8 +57,11 @@ class Track
 		puts "His fine breeding is evident in the curves of his S"
 		puts "Hit any key to agree"
 		blah = gets.chomp
-		puts "The race is about to start!".center(50)
+		system("clear")
 		self.draw_track horse1, horse2, horse3, horse4
+		puts ""
+		puts "The race is about to start!".center(50)
+		puts "Today's opponents are: #{horse2.name}, #{horse3.name}, and the ever fearsome #{horse4.name}."
 		puts ""
 		puts "Mash a key to start the race!"
 		blah = gets.chomp
@@ -75,6 +81,7 @@ end
 		if horse1.position >= 50
 			puts "Congrats to #{horse1.name}!"
 			self.game_on = false
+			self.victor = true
 		elsif horse2.position >= 50
 			puts "Congrats to #{horse2.name}!"
 			self.game_on = false
@@ -88,7 +95,7 @@ end
 	end
 
 	def cheatending
-		if self.cheats == true && self.game_on == false
+		if self.cheats == true && self.game_on == false && self.victor == true
 			puts "You won, but at what cost?"
 			exit
 		end
@@ -114,12 +121,11 @@ end
 		if self.game_on == false
 			exit
 		end
-	puts "Limit break y/n?"
+	puts ""
+	puts "Press anything to continue, or L to activate limit break"
 	answer = gets.chomp.downcase
-		if answer == "y" then
+		if answer == "l" then
 		self.cheating horse1
-		elsif answer == "n"
-		puts "Ok, sure."
 		end
 	end
 end
