@@ -47,14 +47,17 @@ class Track
 		puts "=" * 80
 		blah = gets.chomp
 		system("clear")
-		puts "Meet your horse, The Silky Biscuit:"
-		puts "#{horse1.graphic}".center(36)
+		puts "=" * 80
+		puts "Meet your horse, The Silky Biscuit:".center(80)
+		puts "#{horse1.graphic}".center(80)
+		puts "=" * 80
 		puts "His fine breeding is evident in the curves of his S"
 		puts "Hit any key to agree"
 		blah = gets.chomp
-		puts "Race starting soon!"
+		puts "The race is about to start!".center(50)
 		self.draw_track horse1, horse2, horse3, horse4
-		puts "Press anything to start the show"
+		puts ""
+		puts "Mash a key to start the race!"
 		blah = gets.chomp
 end
 
