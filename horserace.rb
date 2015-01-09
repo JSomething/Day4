@@ -79,17 +79,17 @@ end
 
 	def victory horse1, horse2, horse3, horse4
 		if horse1.position >= 50
-			puts "Congrats to #{horse1.name}!"
+			puts "#{horse1.name} has taken it! No glue factory visits today!"
 			self.game_on = false
 			self.victor = true
 		elsif horse2.position >= 50
-			puts "Congrats to #{horse2.name}!"
+			puts "#{horse2.name} has done it!"
 			self.game_on = false
 		elsif horse3.position >= 50
-			puts "Congrats to #{horse3.name}!"
+			puts "#{horse3.name} has done it!"
 			self.game_on = false
 		elsif horse4.position >= 50
-			puts "Congrats to #{horse4.name}!"
+			puts "#{horse4.name} has done it!"
 			self.game_on = false
 		end
 	end
