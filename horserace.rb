@@ -92,7 +92,7 @@ end
 	end
 
 	def cheating horse1
-			puts "The Silky Biscuit's turbos spool up! How did no one notice he was actually a car?!"
+			puts "The Silky Biscuit's turbo spools up! How did no one notice he was actually a car?!"
 			gets.chomp
 			horse1.position += 20
 			self.cheats = true
