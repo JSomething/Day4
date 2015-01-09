@@ -69,16 +69,16 @@ end
 	end
 
 	def victory horse1, horse2, horse3, horse4
-		if horse1.position >= 40
+		if horse1.position >= 50
 			puts "Congrats to #{horse1.name}!"
 			self.game_on = false
-		elsif horse2.position >= 40
+		elsif horse2.position >= 50
 			puts "Congrats to #{horse2.name}!"
 			self.game_on = false
-		elsif horse3.position >= 40
+		elsif horse3.position >= 50
 			puts "Congrats to #{horse3.name}!"
 			self.game_on = false
-		elsif horse4.position >= 40
+		elsif horse4.position >= 50
 			puts "Congrats to #{horse4.name}!"
 			self.game_on = false
 		end
@@ -92,7 +92,7 @@ end
 	end
 
 	def cheating horse1
-			puts "The Silky Biscuit's turbos spools up! How did no one notice those?!"
+			puts "The Silky Biscuit's turbos spool up! How did no one notice he was actually a car?!"
 			gets.chomp
 			horse1.position += 20
 			self.cheats = true
@@ -124,25 +124,25 @@ end
 
 horse1 = Horse.new
 horse1.name = "The Silky Biscuit"
-horse1.speed = 5
+horse1.speed = 2
 horse1.hp = 30
 horse1.graphic = "TSB"
 
 horse2 = Horse.new
 horse2.name = "Freddy Four Fingers"
-horse2.speed = 4
+horse2.speed = 5
 horse2.hp = 50
 horse2.graphic = "FFF"
 
 horse3 = Horse.new
 horse3.name = "The Khan of Khans"
-horse3.speed = 6
+horse3.speed = 5
 horse3.hp = 80
 horse3.graphic = "TKK"
 
 horse4 = Horse.new
 horse4.name = "Sally Pink Socks"
-horse4.speed = 4
+horse4.speed = 5
 horse4.hp = 40
 horse4.graphic = "SPS"
 
